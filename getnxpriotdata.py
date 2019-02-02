@@ -38,7 +38,7 @@ for e in cur:
    tstamp = e['when'].strftime("%Y%m%dT%H%M%S")
    dat = e['value']
    lat = struct.unpack('<f',dat[0:4])[0]
-   long = struct.unpack('<f',dat[4:8])[0]
+   lon = struct.unpack('<f',dat[4:8])[0]
    temp = struct.unpack('<f',dat[8:12])[0]
    hum = struct.unpack('<f',dat[12:16])[0]
    airtvoc = struct.unpack('<I',dat[16:20])[0]
@@ -46,6 +46,6 @@ for e in cur:
    pressure = struct.unpack('<I',dat[24:28])[0]
    light = struct.unpack('<I',dat[28:32])[0]
    #print tstamp,lat,long
-   print tstamp+","+str(lat)+","+str(long)+","+str(temp)+","+str(hum)+","+str(airtvoc)+","+str(airco2)+","+str(pressure)+","+str(light)
+   print tstamp+","+str(lat)+","+str(lon)+","+str(temp)+","+str(hum)+","+str(pressure)+","+str(light)+","+str(airtvoc)+","+str(airco2)
 
 
