@@ -14,7 +14,7 @@ if (len(sys.argv) != 3):
 (start,end) = sys.argv[1:]
 
 if ( (len(start) != 12) or (len(end) != 12)):
-  print ("Usage: getcar.py startdate enddate")
+  print ("Usage: getnxpriotdata.py startdate enddate")
   print ("Dateformat:  yyyymmddhhmm in UTC")
   sys.exit(-1)
 
